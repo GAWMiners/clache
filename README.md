@@ -1,0 +1,101 @@
+# clache
+### Author
+Evan Lucas
+
+### License
+MIT
+
+## Installation
+```bash
+$ npm install --save clache
+```
+
+## Tests
+```bash
+$ npm test
+```
+
+## Coverage
+```bash
+$ npm run cover
+```
+
+## API
+
+### clache()
+
+Contructor
+
+Example
+
+```js
+var opts = {
+  ttl: 100 // in seconds
+, host: '127.0.0.1'
+, port: 6379
+, password: null
+}
+var cache = new clache(opts)
+```
+
+##### Params
+| Name | Type(s) | Description |
+| ---- | ------- | ----------- |
+| opts | Object | The options object |
+
+
+***
+
+### clache.wrap()
+
+Wrap an asynchronous function and cache it
+
+##### Params
+| Name | Type(s) | Description |
+| ---- | ------- | ----------- |
+| key | String | The key |
+| work | Function | The work function |
+| cb | Function | function(err, res) |
+
+
+***
+
+### clache.set()
+
+Set _val_ for the given _key_
+
+##### Params
+| Name | Type(s) | Description |
+| ---- | ------- | ----------- |
+| key | String | The key |
+| val | String, Number, Boolean, Array, Object | The value |
+| cb | Function | function(err, res) |
+
+
+***
+
+### clache.get()
+
+Get the value for the given _key_
+
+##### Params
+| Name | Type(s) | Description |
+| ---- | ------- | ----------- |
+| key | String | The key |
+| cb | Function | function(err, res) |
+
+
+***
+
+### clache.del()
+
+Deletes the value for the given _key_
+
+##### Params
+| Name | Type(s) | Description |
+| ---- | ------- | ----------- |
+| key | String | The key |
+| cb | Function | function(err, res) |
+
+
+***

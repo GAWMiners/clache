@@ -1,0 +1,12 @@
+machine:
+  node:
+    version: 0.10.28
+  services:
+    - redis
+
+test:
+  override:
+    - npm install
+    - npm test
+    - npm run cover
+    - npm run circle
