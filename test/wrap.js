@@ -44,11 +44,11 @@ describe('clache', function() {
 
       setTimeout(function() {
         getCachedUser(1, end)
-      }, 800)
+      }, 600)
 
       setTimeout(function() {
         getCachedUser(1, end)
-      }, 1500)
+      }, 1200)
     })
   })
 })
