@@ -41,7 +41,7 @@
     }
   },
   "docs": {
-    "token": "",
+    "token": "130880dd46e2636fb09deca068aac8b183d4fd8e",
     "install": "$ npm install --save clache",
     "includes": [
       "lib/index.js"
