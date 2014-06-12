@@ -19,7 +19,8 @@
     "test": "mocha -R spec",
     "cover": "mocha -r blanket -R json-cov | jostle",
     "cover-html": "mocha -r blanket -R html-cov > cov.html",
-    "circle": "mkdir -p $CIRCLE_ARTIFACTS && mocha -r blanket -R html-cov > $CIRCLE_ARTIFACTS/coverage.html"
+    "circle": "mkdir -p $CIRCLE_ARTIFACTS && mocha -r blanket -R html-cov > $CIRCLE_ARTIFACTS/coverage.html",
+    "coveralls": "mocha -r blanket -R mocha-lcov-reporter | coveralls"
   },
   "license": "MIT",
   "keywords": [
