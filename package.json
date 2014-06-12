@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "blanket": "~1.1.6",
+    "coveralls": "~2.10.0",
     "jostle": "~0.1.0",
     "mocha": "~1.18.2",
     "should": "~3.3.1"
