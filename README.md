@@ -1,6 +1,6 @@
 # clache
 [![Build Status](https://circleci.com/gh/GAWMiners/clache.png?circle-token=130880dd46e2636fb09deca068aac8b183d4fd8e)](https://circleci.com/gh/GAWMiners/clache)
-
+[![Coverage Status](https://coveralls.io/repos/GAWMiners/clache/badge.png?branch=master)](https://coveralls.io/r/GAWMiners/clache?branch=master)
 ### Author
 Evan Lucas
 
