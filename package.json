@@ -4,7 +4,7 @@
   "description": "pooled redis caching made easy",
   "main": "index.js",
   "dependencies": {
-    "cache-manager": "~0.5.0",
+    "cache-manager": "git://github.com/evanlucas/node-cache-manager",
     "debug": "~1.0.2",
     "sol-redis-pool": "~0.1.3"
   },
