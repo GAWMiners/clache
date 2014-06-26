@@ -1,6 +1,6 @@
 {
   "name": "clache",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "pooled redis caching made easy",
   "main": "index.js",
   "dependencies": {
