@@ -1,6 +1,5 @@
 var should = require('should')
   , client = require('../')()
-  , ttl = 1
 
 describe('clache', function() {
   describe('store - without ttl', function() {
@@ -25,6 +24,33 @@ describe('clache', function() {
           if (err) return done(err)
           done()
         })
+      })
+    })
+
+    describe('using setex', function() {
+      it('should store the value for the ttl', function(done) {
+        var key = 'clache_tests_ttl_set'
+        client.setex(key, 1, 'evan', function(err, result) {
+          if (err) return done(err)
+          should.exist(result)
+          result.should.equal('OK')
+          client.get(key, function(err, out) {
+            if (err) return done(err)
+            should.exist(out)
+            out.should.be.type('string', 'evan')
+            wait()
+          })
+        })
+
+        function wait() {
+          setTimeout(function() {
+            client.get(key, function(err, out) {
+              if (err) return done(err)
+              should.not.exist(out)
+              done()
+            })
+          }, 1100)
+        }
       })
     })
   })
