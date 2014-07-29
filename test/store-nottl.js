@@ -27,6 +27,21 @@ describe('clache', function() {
       })
     })
 
+    describe('using setnx', function() {
+      it('should return err if key is already set', function(done) {
+        var key = 'gawcache_tests_setnx'
+        client.setnx(key, 'test', function(err, result) {
+          if (err) return done(err)
+          client.setnx(key, 'test', function(err, result) {
+            if (!err) return done(new Error(
+              'Expected error to exist'
+            ))
+            client.del(key, done)
+          })
+        })
+      })
+    })
+
     describe('using setex', function() {
       it('should store the value for the ttl', function(done) {
         var key = 'clache_tests_ttl_set'
